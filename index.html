@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navigate">
+            <div>
+                <span class="nav-link nav-acknow active">Acknowledgement</span>
+                <span class="nav-link nav-under">Undertaking</span>
+            </div>
+
+            <div style="display: flex;flex-direction: row; align-items: center; justify-content: space-around;">
+                <p style="margin: 10px 0px;">Download TDS acknowledgement for the assessment year 2020-21 & 2019-20 &nbsp;&nbsp;</p>
+                <div>
+                    <button class="form-upload">DFCL Document</button>
+                    <button class="form-upload">STC Document</button>
+                </div>
+            </div>
+        </div>
+
+        <form action="" class="form">
+            <div class="form-row grid4">
+                <div class="form-field">
+                    <label for="code" class="form-label">Code<span class="require">*</span></label>
+                    <input type="text" id="code" name="code" class="form-input" value="180067">
+                </div>
+
+                <div class="form-field">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" id="name" name="name" class="form-input" value="Deepak Fertilizers">
+                </div>
+
+                <div class="form-field">
+                    <label for="pan" class="form-label">PAN No <span class="require">*</span></label>
+                    <input type="text" id="pan" name="pan" class="form-input">
+                </div>
+
+                <div class="form-field">
+                    <label for="aadhaar" class="form-label">Aadhaar Number</label>
+                    <input type="text" id="aadhaar" name="aadhaar" class="form-input">
+                </div>
+            </div>
+
+            <div class="form-row grid3">
+                <div class="form-field">
+                    <label for="panLinked" class="form-label">Is your PAN or Aadhaar is linked ? &nbsp;</label> 
+
+                    <input id="panLinkedYes" type="radio" name="panLinked" value="Yes">
+                    <label id="panLinkedYes">Yes</label>
+
+                    <input id="panLinkedNo" type="radio" name="panLinked" value="No">
+                    <label id="panLinkedNo">No</label>
+                </div>
+
+                <div class="upload-container">
+                    <input type="file" name="panUpload">
+                    <button class="form-upload">Upload</button>
+                </div>
+
+                <div class="form-note">
+                    Note - Upload PDF screen shot of PAN/Aadhar linking recieved from Income Tax e-filing website
+                </div>
+            </div>
+
+            <div class="form-row grid2">
+                <div class="form-field">
+                    <label for="turnOver" class="form-label">Is your turnover during the previous Financial Year 2020-21 is more than INR 10,00,00.000 ? <span class="require">*</span></label><br>
+                    <input id="turnOverYes" type="radio" name="turnOver" value="Yes">
+                    <label id="turnOverYes">Yes</label>
+                    <input id="turnOverNo" type="radio" name="turnOver" value="No">
+                    <label id="turnOverNo">No</label>
+                </div>
+
+                <div class="form-note showTurnOverYes">
+                    NOTE: - Submit ITR Acknowledgement Number for last two years. Otherwise TCS/TDS will be deducted as highest applicable rate.
+                </div>
+
+                <div class="form-field hiddenField showTurnOverNo">
+                    <label for="tds" class="form-label">Does aggregate of TDS and TCS appearing in form 26AS in your case in each of these two financial years i.e FY 2018-19 and FY 2019-20 is Rs, 50,000 or more ? <span class="require">*</span></label>
+                    <input id="tdsYes" type="radio" name="tds" value="Yes">
+                    <label id="tdsYes">Yes</label>
+                    <input id="tdsNo" type="radio" name="tds" value="No">
+                    <label id="tdsNo">No</label>
+                </div>
+            </div>
+
+            <div class="form-row gridMix">
+                <div class="form-field">
+                    <label for="acknow1" class="form-label">If you have the acknowledgment document for the Financial Year 2020-21 ? <span class="require">*</span></label> 
+                    <input id="acknow1Yes" type="radio" name="acknow1" value="Yes">
+                    <label id="acknow1Yes">Yes</label>
+                    <input id="acknow1No" type="radio" name="acknow1" value="No">
+                    <label id="acknow1No">No</label> &nbsp;&nbsp;
+
+                    <input style="width: 50%;" type="text" id="acknowNo1" name="acknowNo1" class="form-input" placeholder="Acknoledge No 2020-21">
+
+                    <div class="upload-container" style="margin: 10px 0px;">
+                        <input type="file" name="acknow1Upload">
+                        <button class="form-upload">Upload</button>
+                    </div>
+                </div>
+
+                <div class="form-field">
+                    <label for="acknow2" class="form-label">If you have the acknowledgment document for the Financial Year 2019-20 ? <span class="require">*</span></label> 
+                    <input id="acknow2Yes" type="radio" name="acknow2" value="Yes">
+                    <label id="acknow2Yes">Yes</label>
+                    <input id="acknow2No" type="radio" name="acknow2" value="No">
+                    <label id="acknow2No">No</label> &nbsp;&nbsp;
+
+                    <!-- <label for="acknowNo2" class="form-label">Acknowledgement number and date of IT return for FY 2019-20 (AY 2020-21) ? <span class="require">*</span></label> -->
+                    <input style="width: 50%;" type="text" id="acknowNo2" name="acknowNo2" class="form-input" placeholder="Acknoledge No 2019-20">
+
+                    <div class="upload-container" style="margin: 10px 0px;">
+                        <input type="file" name="acknow2Upload">
+                        <button class="form-upload">Upload</button>
+                    </div>
+                </div>
+
+                <div class="form-note">
+                    NOTE:- Upload PDF Acknowledgement received fron income Tax e-filing website. Refer DFPCL/STL Acknowledgement. 
+                </div>
+            </div>
+
+            <button style="margin: 15px 0px;" class="form-submit">Next</button>
+        </form>
+
+        <div class="undertaking hiddenField">
+            Dear Esteemed Business Partner,<br>
+    
+            In connection with the captioned subject, you would be aware that the Finance Act, 2021 has introduced following TDS/ TCS provisions:<br><br>
+            <div class="heading">1. Section 194Q – TDS on Purchase of Goods</div>
+            The new section 194Q (introduced vide the Finance Act, 2021) imposes requirement to deduct tax at source @ 0.1% on the purchase of goods subject to meeting the specified thresholds provided under the said section. Correspondingly, it is also provided that, where TDS under the section 194Q is deductible and is so deducted, the tax collection at source (TCS) under section 206C(1H) shall not be applicable to the seller of the goods.<br><br>
+            The aforesaid provision is effective from 1 July 2021 and is applicable to all payments/credits for purchase of goods from such date by a purchaser whose total sales, gross receipts or turnover during the year exceeds Rs. 10 crores during the immediately preceding financial year. <br><br>
+            Having regard to the above, we confirm our turnover exceeds INR 10 crores. Hence, we would be deducting TDS under section 194Q on or after 1 July 2021 towards purchase of goods from you which shall be creditable to you while filling your income tax returns. We shall file quarterly TDS returns and said credit will be available on your PAN (26AS) accordingly.<br><br>
+            In view of the above, please do not collect/charge TCS on your invoices/collection on such transaction from 1 July 2021. <br><br>
+            <div class="heading">2. Section 206C(1H) – TCS on Sale of Goods</div>
+            The Finance Act, 2020 had introduced section 206C(1H), as per which tax at the rate of 0.1% is required to be collected by sellers from eligible buyers at the time of receipt of consideration in excess of INR 50 lakhs during the financial year. As per section 194Q of the Act, where turnover is more than INR 10 crores and purchases made by customer in excess of INR 50 lakhs, tax is required to be deducted by customer and is so deducted by the customer, no tax would be required to be collected under the provisions of section 206C(1H) of the Act by the seller. <br><br>
+            Basis the above provisions of section 206C(1H) of the Act, until now, Deepak Fertilisers and Petrochemicals Corporation Limited (‘DFPCL’) or Smartchem Technologies Limited (‘STL’) was collecting tax from its Customers, as applicable. However, as stated above, henceforth, as buyers are required to deduct tax as per the provisions of section 194Q of the Act on purchases made from the DFPCL/STL, and if such tax is actually deducted by you, the Company would not be required to collect tax from you, if applicable, on receipt of sales consideration. <br><br>
+            Where your turnover is less than INR 10 crores and the purchases made from DFPCL/STL respectively is in excess of INR 50 lakhs, DFPCL/STL shall continue collecting TCS u/s 206C(1H) as earlier. 
+            <br><br>
+    
+    
+            <div class="heading">3. Section 206AB (for TDS) and section 206CCA (for TCS) - higher rate of TDS/ TCS on non-filers of return of income:</div>
+            The Finance Act, 2021 has enacted new provisions viz, section 206AB and section 206CCA of the Income Tax Act (‘Act’), which inter alia provides that if deductee/collectee: <br><br>
+            (i) Has not filed income-tax return for either of the past two financial years (‘FY’) immediately prior to the year in which taxes are required to be deducted/collected, within the time limit of filling the return as per section 139(1) of the Act; and <br><br>
+            (ii) The aggregate TDS/TCS of such deductee/collectee is Rs.50,000 or more for each of the previous years.
+            The prescribed penal rates in case of satisfaction of the aforesaid conditions is (i) twice the normal provisions rate of TDS/TCS, or (ii) 5%, whichever is higher. <br><br>
+            
+            <div class="heading">4. Section 139AA(2) and where section 206AA/206AB (TDS) and 206CC/206CCA (TCS) both are applicable – Linking of PAN number with Aadhar  number (Applicable only for Individuals & proprietary business)</div>
+            Section 139AA (2) of the Income Tax Act provides that every person who has been allotted PAN and who is eligible to obtain Aadhar number, shall link his PAN number with Aadhar number. In case of failure to link the Aadhar number, the PAN number allotted to the person shall be made inoperative after the date so notified. <br><br>
+            The date notified for complying with the above requirement is June 30, 2021. In case the PAN becomes invalid due to lack of this compliance from your end, it shall be deemed that you have not furnished PAN number and the higher rate of TDS apply as per section 206AA and section 206AB. Similarly, in case of TCS, higher of the TCS rates as per section 206CC and section 206CCA of the Act shall be applicable. <br><br>
+    
+            The aforesaid provisions are coming into force from July 01,2021 and accordingly applicable for payments/credits to be made by Deepak Fertilisers and Petrochemicals Corporation Limited (‘DFPCL’) or Smartchem Technologies Limited (‘STL’) from 1 July 2021 onwards. To make sure that we deduct/collect correct rate of TDS/TCS, we would require following confirmations from your end. <br><br>
+            The required documents are as below: <br><br>
+            1. Declaration containing the details (viz acknowledgement number and date of filling) of income tax return filed for FY 2018-19 & 2019-20. <br><br>
+            2. If you are a proprietary concern, declaration stating your PAN number is linked with Aadhar number. <br><br>
+            3. As our turnover is more than 10 crores, we would be deducting TDS as per Income Tax Act and you are not required to collect TCS. <br><br>
+            4. In case where purchaser turnover is less than 10 crores, and sale is more than 50 lakhs by us, company will continue to collect TCS and deposit with Income Tax. <br><br>
+            You are required to fill the attached form asap via clicking the below mentioned link: <br><br>
+    
+            Request your support in providing the data in enclosed survey before 10th June’2021. Kindly note that in case there is failure to provide the aforesaid, we will proceed to deduct TDS at the higher rate mentioned above on all the payments made/invoices that are booked on or after 1 July 2021. <br><br>
+    
+            We further confirm that we have filed our return of income for AY 2019-20 and 2020-21 The relevant extract of online ITR filing acknowledgement for AY 2019-20 and 2020-21 are attached herewith for your record. Accordingly, the provision of section 206AB and section 206CC shall not be applicable in respect of TDS/TCS deducted/collected from/to DFPCL/STL. <br><br>
+    
+            <table style="width: 100%;">
+                <tr>
+                    <th> </th>
+                    <th colspan="2">DFPCL</th>
+                    <th colspan="2">STL</th>
+                </tr>
+    
+                <tr>
+                    <td>F.Y</td>
+                    <td>Ack no</td>
+                    <td>Date of filing</td>
+                    <td>Ack no</td>
+                    <td>Date of filing</td>
+                </tr>
+    
+                <tr>
+                    <td>2018-19</td>
+                    <td>264647831291119</td>
+                    <td>29-11-2019</td>
+                    <td>264657181291119</td>
+                    <td>29-11-2019</td>
+                </tr>
+    
+                <tr>
+                    <td>2019-20</td>
+                    <td>152074501090121</td>
+                    <td>09-01-2021</td>
+                    <td>128055031070121</td>
+                    <td>07-01-2021</td>
+                </tr>
+            </table>
+            <br>
+    
+            If the Central Board of Direct Taxes issues any guidelines for the purpose of implementation of the aforesaid provisions, we will issue further communication. <br><br>
+    
+            Looking forward to your response. <br><br>
+    
+            <input type="checkbox"> I agree all terms and conditions mentioned above. <br><br>
+
+            <div style="text-align: center;">
+                <button style="margin: 15px;" class="form-submit">Submit</button>
+            </div>
+        </div>    
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>
