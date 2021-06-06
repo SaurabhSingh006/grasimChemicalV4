@@ -1,0 +1,162 @@
+:root {
+    --txtColor: #028139;
+    --backgroundColor: #e5e5e5;
+    --blueColor: #313ad5;
+    --white: #ffffff;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'Open sans', sans-serif;
+    color: var(--txtColor);
+    background-color: var(--backgroundColor);
+    font-size: 16px;
+}
+
+.container {
+    min-height: 100vh;
+}
+
+.navigate {
+    width: 90%;
+    padding: 20px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-link {
+    padding: 8px 12px;
+    font-size: 14px;
+    margin: 0px 5px;
+    border: 1px solid var(--txtColor);
+    border-radius: 5px;
+}
+
+.active {
+    background-color: var(--blueColor);
+    color: var(--backgroundColor);
+}
+
+.form {
+    margin: auto;
+    width: 95%;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.form-row {
+    width: 100%;
+    margin: 10px 0px;
+    padding: 8px 3px;
+    border: 1px solid rgb(204, 198, 198);
+}
+
+.form-field {
+    padding: 0px 5px;
+}
+
+.form-label {
+  font-size: 14px;
+}
+
+.form-input {
+    border: none;
+    outline: none;
+    background-color: var(--backgroundColor);
+    border-bottom: 1px solid var(--txtColor);
+    font-size: 15px;
+    width: 60%;
+}
+
+.require {
+    color: red;
+}
+
+.grid4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.grid3 {
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr;
+    align-items: center;
+}
+
+.grid2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.gridMix {
+    display: grid;
+    grid-template-columns: 3fr 3fr 2fr;
+}
+
+.upload-container {
+    /* background-color: red; */
+}
+
+.form-upload {
+    border: none;
+    outline: none;
+    color: var(--backgroundColor);
+    background-color: var(--blueColor);
+    padding: 4px 6px;
+    border-radius: 3px;
+}
+
+.form-note {
+    padding: 0px 10px;
+    font-size: 12px;
+}
+
+.hiddenField {
+    display: none;
+}
+
+.undertaking {
+    padding: 20px 50px;
+    margin: 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border-radius: 10px;
+}
+
+.heading {
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: underline;
+}
+table, th, td {
+    border: 2px solid #4b4848;
+    border-collapse: collapse;
+}
+
+.form-submit {
+    padding: 5px;
+    width: 100px;
+    font-size: 18px;
+    border: hidden;
+    color: black;
+    border: 1px solid green;
+    background-color: orange;
+    outline: none;
+    box-shadow: 0 0 7px 0px #2b2721;
+}
